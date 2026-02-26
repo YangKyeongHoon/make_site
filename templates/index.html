@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ 나의 포트폴리오 ✨</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>👋 안녕하세요! 양경훈의 포트폴리오입니다!</h1>
+        <p>제가 만든 프로젝트들을 소개합니다. 함께 보실까요? 🚀</p>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>🌟 저를 소개합니다</h2>
+            <p>안녕하세요! 저는 개발자 입니다. [간단한 자기소개]. 새로운 기술을 배우고 적용하는 것을 좋아해요! 💪</p>
+            <!-- 이미지 플레이스홀더 -->
+            <img src="https://via.placeholder.com/400x200?text=Your+Profile+Image" alt="프로필 이미지" style="max-width: 100%; height: auto; margin-top: 20px;">
+        </section>
+
+        <section id="projects">
+            <h2>💡 프로젝트</h2>
+            <div class="project-list">
+                {% for project in projects %}
+                <div class="project-card">
+                    <h3>{{ project.title }}</h3>
+                    <p>{{ project.description }}</p>
+                    <p><strong>기술 스택:</strong> {{ ", ".join(project.tech_stack) }}</p>
+                    <img src="{{ project.image_url }}" alt="{{ project.title }} 이미지" style="max-width: 100%; height: auto; margin-top: 10px;">
+                    <a href="{{ project.link }}" class="button" target="_blank">자세히 보기</a>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>💬 Contact Me!</h2>
+            <p>저와 함께 작업하고 싶으시거나 궁금한 점이 있으시면 언제든지 연락해주세요! 😊</p>
+            <p>이메일: <a href="mailto:slwhpddl12@gmail.com">slwhpddl12@gmail.com</a></p>
+            <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 [당신의 이름]. All rights reserved. 💖</p>
+    </footer>
+</body>
+</html>
