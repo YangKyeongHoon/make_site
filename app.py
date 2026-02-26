@@ -6,6 +6,13 @@ app = Flask(__name__)
 def index():
     projects = [
         {
+            'title': 'Gemini CLI와 함께 만든 포트폴리오 사이트 🤖',
+            'description': 'Gemini CLI와 대화하며 단계별로 구축한 파이썬 Flask 기반의 개인 포트폴리오 웹사이트입니다. 프로젝트 요구사항 분석부터 파일 생성, 코드 작성, 동적 데이터 바인딩, 그리고 기본적인 디자인 적용까지 전 과정을 함께 진행했습니다.',
+            'tech_stack': ['Python', 'Flask', 'HTML', 'CSS', 'Jinja2'],
+            'image_url': 'https://via.placeholder.com/300x180?text=Gemini+CLI+Project', # 이 프로젝트의 스크린샷 등으로 변경해주세요!
+            'link': '#' # 나중에 이 포트폴리오 사이트의 GitHub 저장소 링크로 변경해주세요!
+        },
+        {
             'title': '프로젝트 1 제목 🌟',
             'description': '이 프로젝트는 제가 [해결하고자 했던 문제]를 [사용한 기술]을 활용하여 해결한 경험을 담고 있습니다. 사용자 경험 개선에 중점을 두었으며, [구체적인 성과나 기능]을 달성했습니다!',
             'tech_stack': ['Python', 'Flask', 'HTML', 'CSS', 'JavaScript'],
